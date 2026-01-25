@@ -36,24 +36,67 @@ ln -s $(pwd)/marketing/gtm-copywriter ~/.claude/skills/gtm-copywriter
 
 ## Skills by Category
 
-### Marketing (5 skills, 52 rules)
+### Marketing (13 skills)
 
-Full-funnel marketing expertise from awareness through advocacy.
+Complete marketing expertise covering the full funnel from awareness through advocacy.
 
-| Skill | Description | Rules |
-|-------|-------------|-------|
-| [`gtm-leader`](marketing/gtm-leader) | Strategic GTM planning, positioning, brand building, platform tactics | 14 |
-| [`gtm-copywriter`](marketing/gtm-copywriter) | Email, content, and social media copywriting | 12 |
-| [`senior-product-marketer`](marketing/senior-product-marketer) | Trial acquisition, value propositions, conversion optimization | 5 |
-| [`performance-marketer`](marketing/performance-marketer) | Paid acquisition, CRO, landing pages, A/B testing, analytics | 11 |
-| [`customer-lifecycle-marketer`](marketing/customer-lifecycle-marketer) | Retention, expansion, advocacy, referrals, win-back | 10 |
+#### Strategy & Leadership
+| Skill | Description |
+|-------|-------------|
+| [`gtm-leader`](marketing/gtm-leader) | Strategic GTM planning, positioning, brand building, platform tactics |
+| [`competitive-strategist`](marketing/competitive-strategist) | Win/loss analysis, battlecards, market intelligence, competitive positioning |
+| [`pricing-strategist`](marketing/pricing-strategist) | Pricing psychology, packaging, value metrics, enterprise pricing |
+
+#### Acquisition & Growth
+| Skill | Description |
+|-------|-------------|
+| [`performance-marketer`](marketing/performance-marketer) | Paid acquisition, CRO, landing pages, A/B testing, analytics |
+| [`seo-content-strategist`](marketing/seo-content-strategist) | Keyword research, content clusters, technical SEO, link building |
+| [`senior-product-marketer`](marketing/senior-product-marketer) | Trial acquisition, value propositions, conversion optimization |
+
+#### Content & Copy
+| Skill | Description |
+|-------|-------------|
+| [`gtm-copywriter`](marketing/gtm-copywriter) | Email, content, and social media copywriting |
+| [`website-copy-specialist`](marketing/website-copy-specialist) | Homepage, feature pages, pricing pages, comparison pages |
+| [`pr-specialist`](marketing/pr-specialist) | Press releases, media pitches, crisis comms, analyst relations |
+
+#### Customer & Community
+| Skill | Description |
+|-------|-------------|
+| [`customer-lifecycle-marketer`](marketing/customer-lifecycle-marketer) | Retention, expansion, advocacy, referrals, win-back |
+| [`community-builder`](marketing/community-builder) | Community-led growth, Discord/Slack, ambassador programs, DevRel |
+
+#### Channels & Events
+| Skill | Description |
+|-------|-------------|
+| [`partnership-marketer`](marketing/partnership-marketer) | Co-marketing, integrations marketplace, affiliate programs, channel partners |
+| [`event-marketer`](marketing/event-marketer) | Conferences, webinars, virtual events, field marketing |
 
 ```
-Awareness → Consideration → Trial → Activation → Retention → Expansion → Advocacy
-    │            │           │          │            │           │          │
-gtm-leader  gtm-copywriter  senior-   customer-lifecycle-marketer ─────────┘
-                            product-
-                            marketer
+                            ┌─────────────────────────────────────┐
+                            │         MARKETING FUNNEL            │
+                            └─────────────────────────────────────┘
+
+  AWARENESS          CONSIDERATION         CONVERSION          RETENTION           ADVOCACY
+      │                    │                   │                   │                   │
+      ▼                    ▼                   ▼                   ▼                   ▼
+┌───────────┐       ┌─────────────┐     ┌───────────┐      ┌───────────────┐   ┌─────────────┐
+│gtm-leader │       │performance- │     │senior-    │      │customer-      │   │community-   │
+│pr-         │       │marketer     │     │product-   │      │lifecycle-     │   │builder      │
+│specialist │       │seo-content- │     │marketer   │      │marketer       │   │             │
+│event-     │       │strategist   │     │pricing-   │      │               │   │             │
+│marketer   │       │             │     │strategist │      │               │   │             │
+└───────────┘       └─────────────┘     └───────────┘      └───────────────┘   └─────────────┘
+                                              │
+                    ┌─────────────────────────┴─────────────────────────┐
+                    │                  SUPPORT SKILLS                   │
+                    ├───────────────┬──────────────────┬────────────────┤
+                    │gtm-copywriter │website-copy-     │competitive-    │
+                    │               │specialist        │strategist      │
+                    │               │                  │partnership-    │
+                    │               │                  │marketer        │
+                    └───────────────┴──────────────────┴────────────────┘
 ```
 
 ---
