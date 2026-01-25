@@ -58,7 +58,7 @@ gtm-leader  gtm-copywriter  senior-   customer-lifecycle-marketer ────�
 
 ---
 
-### Video Production (13 skills)
+### Video Production (12 skills)
 
 Complete video creation pipeline from concept to render, built around Remotion.
 
@@ -76,28 +76,6 @@ Complete video creation pipeline from concept to render, built around Remotion.
 | [`remotion-performance-optimizer`](video/remotion-performance-optimizer) | Performance analysis and optimization |
 | [`remotion-video-reviewer`](video/remotion-video-reviewer) | Review implementations for spec compliance |
 | [`create-video-start`](video/create-video-start) | Master orchestrator for video creation pipeline |
-
----
-
-### Development (4 skills)
-
-Best practices for modern web development.
-
-| Skill | Description |
-|-------|-------------|
-| [`vercel-react-best-practices`](vercel-react-best-practices) | React and Next.js performance optimization from Vercel Engineering |
-| [`stripe-best-practices`](stripe-best-practices) | Stripe integration patterns for payments, subscriptions, webhooks |
-| [`ui-skills`](ui-skills) | Opinionated constraints for building better interfaces |
-| [`web-design-guidelines`](web-design-guidelines) | Web Interface Guidelines compliance and accessibility |
-
----
-
-### Documentation & Tooling (2 skills)
-
-| Skill | Description |
-|-------|-------------|
-| [`github-wiki-docs`](github-wiki-docs) | Changelog and GitHub wiki documentation patterns |
-| [`skill-creator`](skill-creator) | Create new Claude Code skills with proper structure |
 
 ---
 
