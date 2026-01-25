@@ -1,16 +1,15 @@
 ```
-   _____ _                 _        _____ _    _ _ _
-  / ____| |               | |      / ____| |  (_) | |
- | |    | | __ _ _   _  __| | ___ | (___ | | ___| | |___
- | |    | |/ _` | | | |/ _` |/ _ \ \___ \| |/ / | | / __|
- | |____| | (_| | |_| | (_| |  __/ ____) |   <| | | \__ \
-  \_____|_|\__,_|\__,_|\__,_|\___||_____/|_|\_\_|_|_|___/
-
+  ____  _             _                    ___  ____
+ / ___|| |_ __ _ _ __| |_ _   _ _ __      / _ \/ ___|
+ \___ \| __/ _` | '__| __| | | | '_ \    | | | \___ \
+  ___) | || (_| | |  | |_| |_| | |_) |   | |_| |___) |
+ |____/ \__\__,_|_|   \__|\__,_| .__/     \___/|____/
+                               |_|
 ```
 
-# Claude Skills Collection
+# Startup OS
 
-A curated collection of Claude Code skills — reusable expertise modules that enhance Claude's capabilities for specialized tasks. Part of the **Startup OS** initiative.
+A comprehensive collection of Claude Code skills for building and scaling startups — reusable expertise modules covering every function from sales to engineering.
 
 ## What are Skills?
 
