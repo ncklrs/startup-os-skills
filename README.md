@@ -10,7 +10,7 @@
 
 # Claude Skills Collection
 
-A curated collection of Claude Code skills — reusable expertise modules that enhance Claude's capabilities for specialized tasks.
+A curated collection of Claude Code skills — reusable expertise modules that enhance Claude's capabilities for specialized tasks. Part of the **Startup OS** initiative.
 
 ## What are Skills?
 
@@ -35,6 +35,55 @@ ln -s $(pwd)/marketing/gtm-copywriter ~/.claude/skills/gtm-copywriter
 ---
 
 ## Skills by Category
+
+### Sales (8 skills)
+
+Complete sales expertise from strategy through operations.
+
+| Skill | Description |
+|-------|-------------|
+| [`sales-strategist`](sales/sales-strategist) | Sales methodology, territory planning, pipeline strategy, win rates |
+| [`discovery-caller`](sales/discovery-caller) | Discovery frameworks, qualification, pain identification, MEDDIC |
+| [`demo-specialist`](sales/demo-specialist) | Demo preparation, storytelling, objection handling, technical demos |
+| [`proposal-writer`](sales/proposal-writer) | Proposal structure, executive summaries, pricing presentation, RFP responses |
+| [`sales-negotiator`](sales/sales-negotiator) | Negotiation tactics, discount strategy, multi-party deals, contract terms |
+| [`account-executive`](sales/account-executive) | Full-cycle sales, account management, quota attainment, forecasting |
+| [`sales-enablement`](sales/sales-enablement) | Sales training, playbooks, content, onboarding, tool adoption |
+| [`sales-ops-analyst`](sales/sales-ops-analyst) | CRM optimization, pipeline analytics, territory design, comp plans |
+
+---
+
+### Product (8 skills)
+
+Complete product management expertise from strategy through launch.
+
+| Skill | Description |
+|-------|-------------|
+| [`product-strategist`](product/product-strategist) | Product vision, roadmap strategy, market positioning, portfolio management |
+| [`product-discovery`](product/product-discovery) | User research, opportunity assessment, problem validation, prototyping |
+| [`product-manager`](product/product-manager) | Feature development, sprint planning, stakeholder management, metrics |
+| [`product-specs-writer`](product/product-specs-writer) | PRDs, user stories, acceptance criteria, technical specs |
+| [`product-analyst`](product/product-analyst) | Product analytics, funnel analysis, experimentation, data-driven decisions |
+| [`product-launch-manager`](product/product-launch-manager) | Launch planning, GTM coordination, beta programs, release management |
+| [`growth-product-manager`](product/growth-product-manager) | Growth loops, activation, retention, monetization, experimentation |
+| [`platform-product-manager`](product/platform-product-manager) | API strategy, developer experience, platform ecosystems, integrations |
+
+---
+
+### Customer Success (6 skills)
+
+Complete customer success expertise from onboarding through renewal.
+
+| Skill | Description |
+|-------|-------------|
+| [`cs-strategist`](customer-success) | CS org design, segmentation, metrics, playbooks, technology stack |
+| [`onboarding-specialist`](customer-success/onboarding-specialist) | Onboarding programs, time-to-value, implementation, training delivery |
+| [`customer-health-analyst`](customer-success/customer-health-analyst) | Health scoring, churn prediction, usage analytics, cohort analysis |
+| [`support-operations`](customer-success/support-operations) | Ticket management, SLAs, tier structure, knowledge base, quality assurance |
+| [`qbr-facilitator`](customer-success/qbr-facilitator) | QBR programs, executive preparation, value demonstration, strategic planning |
+| [`renewal-manager`](customer-success/renewal-manager) | Renewal forecasting, playbooks, save plays, expansion, contract negotiation |
+
+---
 
 ### Marketing (13 skills)
 
@@ -119,6 +168,30 @@ Complete video creation pipeline from concept to render, built around Remotion.
 | [`remotion-performance-optimizer`](video/remotion-performance-optimizer) | Performance analysis and optimization |
 | [`remotion-video-reviewer`](video/remotion-video-reviewer) | Review implementations for spec compliance |
 | [`create-video-start`](video/create-video-start) | Master orchestrator for video creation pipeline |
+
+---
+
+## Startup OS Roadmap
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           STARTUP OS SKILLS                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ✅ PHASE 1 - Core Revenue Engine (22 skills)                               │
+│     Sales (8) │ Product (8) │ Customer Success (6)                          │
+│                                                                             │
+│  ⏳ PHASE 2 - Operations & Finance                                          │
+│     Finance │ Legal │ People/HR                                             │
+│                                                                             │
+│  ⏳ PHASE 3 - Engineering & Technical                                       │
+│     Engineering │ Security │ Data                                           │
+│                                                                             │
+│  ⏳ PHASE 4 - Strategy & Growth                                             │
+│     Strategy │ Fundraising │ M&A                                            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
