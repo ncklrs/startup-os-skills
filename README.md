@@ -7,131 +7,168 @@
                                |_|
 ```
 
-# Startup OS
+# Startup OS Skills
 
-A comprehensive collection of Claude Code skills for building and scaling startups — reusable expertise modules covering every function from sales to engineering.
+A comprehensive collection of **51 AI agent skills** for building and scaling startups — reusable expertise modules covering sales, marketing, product, customer success, and video production.
+
+[![Skills](https://img.shields.io/badge/skills-51-blue)](https://skills.sh)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+## Quick Start
+
+Install all skills with one command:
+
+```bash
+npx skills add ncklrs/startup-os-skills
+```
+
+Select the skills you want to install, and they'll be added to your AI coding agent (Claude Code, Cursor, Windsurf, etc.).
+
+### Install Specific Skills
+
+```bash
+# Install and select interactively
+npx skills add ncklrs/startup-os-skills
+
+# List available skills without installing
+npx skills add ncklrs/startup-os-skills --list
+```
+
+---
 
 ## What are Skills?
 
-Skills are markdown-based knowledge modules that Claude loads when invoked. They provide:
+Skills are markdown-based knowledge modules that AI agents load when invoked. They provide:
 
-- **Domain expertise** — Deep knowledge in specific areas
+- **Domain expertise** — Deep knowledge in specific areas (sales, marketing, product, etc.)
 - **Consistent patterns** — Reusable rules and guidelines
 - **Contextual guidance** — Applied automatically when relevant
+- **Trigger phrases** — Agents know when to activate each skill
 
-## Installation
+### How Skills Work
 
-Copy any skill directory to your Claude Code skills folder:
-
-```bash
-# Copy a single skill
-cp -r marketing/gtm-copywriter ~/.claude/skills/
-
-# Or symlink for easy updates
-ln -s $(pwd)/marketing/gtm-copywriter ~/.claude/skills/gtm-copywriter
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  User: "Help me write a discovery call script"                  │
+├─────────────────────────────────────────────────────────────────┤
+│  Agent detects: "discovery call" → loads discovery-caller skill │
+├─────────────────────────────────────────────────────────────────┤
+│  Skill provides: SPIN framework, qualification questions,       │
+│                  pain identification templates, examples        │
+├─────────────────────────────────────────────────────────────────┤
+│  Agent responds with expert-level discovery call guidance       │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Skills by Category
+## Skills Overview
 
-### Sales (8 skills)
-
-Complete sales expertise from strategy through operations.
-
-| Skill | Description |
-|-------|-------------|
-| [`sales-strategist`](sales/sales-strategist) | Sales methodology, territory planning, pipeline strategy, win rates |
-| [`discovery-caller`](sales/discovery-caller) | Discovery frameworks, qualification, pain identification, MEDDIC |
-| [`demo-specialist`](sales/demo-specialist) | Demo preparation, storytelling, objection handling, technical demos |
-| [`proposal-writer`](sales/proposal-writer) | Proposal structure, executive summaries, pricing presentation, RFP responses |
-| [`sales-negotiator`](sales/sales-negotiator) | Negotiation tactics, discount strategy, multi-party deals, contract terms |
-| [`account-executive`](sales/account-executive) | Full-cycle sales, account management, quota attainment, forecasting |
-| [`sales-enablement`](sales/sales-enablement) | Sales training, playbooks, content, onboarding, tool adoption |
-| [`sales-ops-analyst`](sales/sales-ops-analyst) | CRM optimization, pipeline analytics, territory design, comp plans |
+| Category | Skills | Parent Skill |
+|----------|--------|--------------|
+| [Sales](#sales-9-skills) | 9 | `sales-leader` |
+| [Marketing](#marketing-14-skills) | 14 | `marketing-strategist` |
+| [Product](#product-9-skills) | 9 | `product-leader` |
+| [Customer Success](#customer-success-6-skills) | 6 | `cs-strategist` |
+| [Video Production](#video-production-13-skills) | 13 | `remotion-asset-coordinator` |
+| **Total** | **51** | |
 
 ---
 
-### Product (8 skills)
+## Sales (9 skills)
 
-Complete product management expertise from strategy through launch.
+**Parent Skill:** [`sales-leader`](skills/sales-leader) — Strategic sales leadership for B2B SaaS
 
-| Skill | Description |
-|-------|-------------|
-| [`product-strategist`](product/product-strategist) | Product vision, roadmap strategy, market positioning, portfolio management |
-| [`product-discovery`](product/product-discovery) | User research, opportunity assessment, problem validation, prototyping |
-| [`product-manager`](product/product-manager) | Feature development, sprint planning, stakeholder management, metrics |
-| [`product-specs-writer`](product/product-specs-writer) | PRDs, user stories, acceptance criteria, technical specs |
-| [`product-analyst`](product/product-analyst) | Product analytics, funnel analysis, experimentation, data-driven decisions |
-| [`product-launch-manager`](product/product-launch-manager) | Launch planning, GTM coordination, beta programs, release management |
-| [`growth-product-manager`](product/growth-product-manager) | Growth loops, activation, retention, monetization, experimentation |
-| [`platform-product-manager`](product/platform-product-manager) | API strategy, developer experience, platform ecosystems, integrations |
+Complete sales expertise from strategy through execution.
 
----
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`sales-strategist`](skills/sales-strategist) | Sales methodology, territory planning, pipeline strategy | Designing sales processes, improving win rates |
+| [`account-executive`](skills/account-executive) | Full-cycle enterprise sales, account management | Running complex deals, managing accounts |
+| [`discovery-caller`](skills/discovery-caller) | Discovery frameworks, MEDDPICC, pain identification | Preparing for discovery calls, qualifying leads |
+| [`demo-specialist`](skills/demo-specialist) | Demo preparation, storytelling, objection handling | Creating product demos, handling objections |
+| [`proposal-writer`](skills/proposal-writer) | Proposal structure, executive summaries, RFP responses | Writing proposals, responding to RFPs |
+| [`sales-negotiator`](skills/sales-negotiator) | Negotiation tactics, discount strategy, contract terms | Negotiating deals, handling pricing objections |
+| [`sales-enablement`](skills/sales-enablement) | Sales training, playbooks, onboarding | Building sales training, creating playbooks |
+| [`sales-ops-analyst`](skills/sales-ops-analyst) | CRM optimization, pipeline analytics, comp plans | Optimizing sales operations, building dashboards |
 
-### Customer Success (6 skills)
-
-Complete customer success expertise from onboarding through renewal.
-
-| Skill | Description |
-|-------|-------------|
-| [`cs-strategist`](customer-success) | CS org design, segmentation, metrics, playbooks, technology stack |
-| [`onboarding-specialist`](customer-success/onboarding-specialist) | Onboarding programs, time-to-value, implementation, training delivery |
-| [`customer-health-analyst`](customer-success/customer-health-analyst) | Health scoring, churn prediction, usage analytics, cohort analysis |
-| [`support-operations`](customer-success/support-operations) | Ticket management, SLAs, tier structure, knowledge base, quality assurance |
-| [`qbr-facilitator`](customer-success/qbr-facilitator) | QBR programs, executive preparation, value demonstration, strategic planning |
-| [`renewal-manager`](customer-success/renewal-manager) | Renewal forecasting, playbooks, save plays, expansion, contract negotiation |
-
----
-
-### Marketing (13 skills)
-
-Complete marketing expertise covering the full funnel from awareness through advocacy.
-
-#### Strategy & Leadership
-| Skill | Description |
-|-------|-------------|
-| [`gtm-leader`](marketing/gtm-leader) | Strategic GTM planning, positioning, brand building, platform tactics |
-| [`competitive-strategist`](marketing/competitive-strategist) | Win/loss analysis, battlecards, market intelligence, competitive positioning |
-| [`pricing-strategist`](marketing/pricing-strategist) | Pricing psychology, packaging, value metrics, enterprise pricing |
-
-#### Acquisition & Growth
-| Skill | Description |
-|-------|-------------|
-| [`performance-marketer`](marketing/performance-marketer) | Paid acquisition, CRO, landing pages, A/B testing, analytics |
-| [`seo-content-strategist`](marketing/seo-content-strategist) | Keyword research, content clusters, technical SEO, link building |
-| [`senior-product-marketer`](marketing/senior-product-marketer) | Trial acquisition, value propositions, conversion optimization |
-
-#### Content & Copy
-| Skill | Description |
-|-------|-------------|
-| [`gtm-copywriter`](marketing/gtm-copywriter) | Email, content, and social media copywriting |
-| [`website-copy-specialist`](marketing/website-copy-specialist) | Homepage, feature pages, pricing pages, comparison pages |
-| [`pr-specialist`](marketing/pr-specialist) | Press releases, media pitches, crisis comms, analyst relations |
-
-#### Customer & Community
-| Skill | Description |
-|-------|-------------|
-| [`customer-lifecycle-marketer`](marketing/customer-lifecycle-marketer) | Retention, expansion, advocacy, referrals, win-back |
-| [`community-builder`](marketing/community-builder) | Community-led growth, Discord/Slack, ambassador programs, DevRel |
-
-#### Channels & Events
-| Skill | Description |
-|-------|-------------|
-| [`partnership-marketer`](marketing/partnership-marketer) | Co-marketing, integrations marketplace, affiliate programs, channel partners |
-| [`event-marketer`](marketing/event-marketer) | Conferences, webinars, virtual events, field marketing |
+### Sales Skill Architecture
 
 ```
-                            ┌─────────────────────────────────────┐
-                            │         MARKETING FUNNEL            │
-                            └─────────────────────────────────────┘
+                    ┌─────────────────┐
+                    │  sales-leader   │  ← Strategic oversight
+                    └────────┬────────┘
+                             │
+        ┌────────────────────┼────────────────────┐
+        │                    │                    │
+        ▼                    ▼                    ▼
+┌───────────────┐    ┌───────────────┐    ┌───────────────┐
+│   STRATEGY    │    │   EXECUTION   │    │  OPERATIONS   │
+├───────────────┤    ├───────────────┤    ├───────────────┤
+│sales-strategist│   │discovery-caller│   │sales-ops-     │
+│               │    │demo-specialist │    │analyst        │
+│               │    │proposal-writer │    │sales-         │
+│               │    │sales-negotiator│    │enablement     │
+│               │    │account-        │    │               │
+│               │    │executive       │    │               │
+└───────────────┘    └───────────────┘    └───────────────┘
+```
 
+---
+
+## Marketing (14 skills)
+
+**Parent Skill:** [`marketing-strategist`](skills/marketing-strategist) — Strategic marketing leadership for B2B SaaS
+
+Complete marketing expertise covering the full funnel.
+
+### Strategy & Leadership
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`gtm-leader`](skills/gtm-leader) | GTM strategy, positioning, brand building | Planning go-to-market, market entry |
+| [`competitive-strategist`](skills/competitive-strategist) | Win/loss analysis, battlecards, market intelligence | Competitive analysis, positioning |
+| [`pricing-strategist`](skills/pricing-strategist) | Pricing psychology, packaging, value metrics | Setting pricing, packaging products |
+
+### Acquisition & Growth
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`performance-marketer`](skills/performance-marketer) | Paid acquisition, CRO, landing pages, A/B testing | Running paid campaigns, optimizing conversion |
+| [`seo-content-strategist`](skills/seo-content-strategist) | Keyword research, content clusters, technical SEO | SEO strategy, content planning |
+| [`senior-product-marketer`](skills/senior-product-marketer) | Trial acquisition, value propositions, launches | Product launches, messaging |
+
+### Content & Copy
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`gtm-copywriter`](skills/gtm-copywriter) | Email, content, and social media copywriting | Writing marketing copy |
+| [`website-copy-specialist`](skills/website-copy-specialist) | Homepage, feature pages, pricing pages | Writing website copy |
+| [`pr-specialist`](skills/pr-specialist) | Press releases, media pitches, analyst relations | PR campaigns, media outreach |
+
+### Customer & Community
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`customer-lifecycle-marketer`](skills/customer-lifecycle-marketer) | Retention, expansion, advocacy, win-back | Lifecycle campaigns, retention |
+| [`community-builder`](skills/community-builder) | Community-led growth, Discord/Slack, DevRel | Building communities |
+
+### Channels & Events
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`partnership-marketer`](skills/partnership-marketer) | Co-marketing, integrations, affiliate programs | Partner programs |
+| [`event-marketer`](skills/event-marketer) | Conferences, webinars, field marketing | Event planning |
+
+### Marketing Funnel Coverage
+
+```
   AWARENESS          CONSIDERATION         CONVERSION          RETENTION           ADVOCACY
       │                    │                   │                   │                   │
       ▼                    ▼                   ▼                   ▼                   ▼
 ┌───────────┐       ┌─────────────┐     ┌───────────┐      ┌───────────────┐   ┌─────────────┐
 │gtm-leader │       │performance- │     │senior-    │      │customer-      │   │community-   │
-│pr-         │       │marketer     │     │product-   │      │lifecycle-     │   │builder      │
+│pr-        │       │marketer     │     │product-   │      │lifecycle-     │   │builder      │
 │specialist │       │seo-content- │     │marketer   │      │marketer       │   │             │
 │event-     │       │strategist   │     │pricing-   │      │               │   │             │
 │marketer   │       │             │     │strategist │      │               │   │             │
@@ -149,45 +186,140 @@ Complete marketing expertise covering the full funnel from awareness through adv
 
 ---
 
-### Video Production (12 skills)
+## Product (9 skills)
 
-Complete video creation pipeline from concept to render, built around Remotion.
+**Parent Skill:** [`product-leader`](skills/product-leader) — Strategic product leadership for SaaS
 
-| Skill | Description |
-|-------|-------------|
-| [`motion-designer`](video/motion-designer) | Professional motion design with scene composition, timing, transitions |
-| [`vsl-storyboard-writer`](video/vsl-storyboard-writer) | Video sales letter and product marketing storyboards |
-| [`remotion-best-practices`](video/remotion-best-practices) | Core Remotion patterns for animations, assets, audio, timing |
-| [`remotion-scaffold`](video/remotion-scaffold) | Project structure and file organization |
-| [`remotion-spec-translator`](video/remotion-spec-translator) | Convert motion specs to Remotion code |
-| [`remotion-component-gen`](video/remotion-component-gen) | Generate scene components from visual direction |
-| [`remotion-composition`](video/remotion-composition) | Sequence ordering and scene transitions |
-| [`remotion-animation`](video/remotion-animation) | Spring configs, interpolations, easing functions |
-| [`remotion-render-config`](video/remotion-render-config) | Output settings, codec, format, quality |
-| [`remotion-performance-optimizer`](video/remotion-performance-optimizer) | Performance analysis and optimization |
-| [`remotion-video-reviewer`](video/remotion-video-reviewer) | Review implementations for spec compliance |
-| [`create-video-start`](video/create-video-start) | Master orchestrator for video creation pipeline |
+Complete product management expertise from strategy through launch.
 
----
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`product-strategist`](skills/product-strategist) | Product vision, roadmap strategy, positioning | Defining product strategy |
+| [`product-manager`](skills/product-manager) | Feature development, sprint planning, stakeholders | Day-to-day PM work |
+| [`product-discovery`](skills/product-discovery) | User research, opportunity assessment, validation | Running discovery, research |
+| [`product-specs-writer`](skills/product-specs-writer) | PRDs, user stories, acceptance criteria | Writing specs, PRDs |
+| [`product-analyst`](skills/product-analyst) | Product analytics, funnel analysis, experimentation | Analyzing metrics, A/B tests |
+| [`product-launch-manager`](skills/product-launch-manager) | Launch planning, GTM coordination, releases | Planning launches |
+| [`growth-product-manager`](skills/growth-product-manager) | Growth loops, activation, retention, monetization | Growth experiments |
+| [`platform-product-manager`](skills/platform-product-manager) | API strategy, developer experience, ecosystems | Platform/API products |
 
-## Startup OS Roadmap
+### Product Lifecycle Coverage
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           STARTUP OS SKILLS                                  │
+│                         PRODUCT LIFECYCLE                                    │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  ✅ PHASE 1 - Core Revenue Engine (22 skills)                               │
-│     Sales (8) │ Product (8) │ Customer Success (6)                          │
+│   DISCOVER              DEFINE              BUILD              LAUNCH       │
+│       │                    │                   │                   │        │
+│       ▼                    ▼                   ▼                   ▼        │
+│  ┌─────────┐         ┌─────────┐         ┌─────────┐         ┌─────────┐   │
+│  │product- │         │product- │         │product- │         │product- │   │
+│  │discovery│         │specs-   │         │manager  │         │launch-  │   │
+│  │         │         │writer   │         │         │         │manager  │   │
+│  │product- │         │product- │         │product- │         │         │   │
+│  │strategist│        │strategist│        │analyst  │         │         │   │
+│  └─────────┘         └─────────┘         └─────────┘         └─────────┘   │
 │                                                                             │
-│  ⏳ PHASE 2 - Operations & Finance                                          │
-│     Finance │ Legal │ People/HR                                             │
+│   SPECIALIZED: growth-product-manager │ platform-product-manager            │
 │                                                                             │
-│  ⏳ PHASE 3 - Engineering & Technical                                       │
-│     Engineering │ Security │ Data                                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Customer Success (6 skills)
+
+**Parent Skill:** [`cs-strategist`](skills/cs-strategist) — Strategic CS leadership for org design, segmentation, and metrics
+
+Complete customer success expertise from onboarding through renewal.
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`onboarding-specialist`](skills/onboarding-specialist) | Onboarding programs, time-to-value, implementation | Designing onboarding |
+| [`customer-health-analyst`](skills/customer-health-analyst) | Health scoring, churn prediction, usage analytics | Building health scores |
+| [`support-operations`](skills/support-operations) | Ticket management, SLAs, knowledge base, QA | Support process design |
+| [`qbr-facilitator`](skills/qbr-facilitator) | QBR programs, executive preparation, value demos | Running QBRs |
+| [`renewal-manager`](skills/renewal-manager) | Renewal forecasting, save plays, expansion | Managing renewals |
+
+### Customer Journey Coverage
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       CUSTOMER JOURNEY                                       │
+├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  ⏳ PHASE 4 - Strategy & Growth                                             │
-│     Strategy │ Fundraising │ M&A                                            │
+│   ONBOARD             ADOPT               EXPAND              RENEW         │
+│       │                 │                    │                   │          │
+│       ▼                 ▼                    ▼                   ▼          │
+│  ┌──────────┐     ┌──────────┐        ┌──────────┐        ┌──────────┐     │
+│  │onboarding│     │customer- │        │qbr-      │        │renewal-  │     │
+│  │specialist│     │health-   │        │facilitator│       │manager   │     │
+│  │          │     │analyst   │        │          │        │          │     │
+│  └──────────┘     └──────────┘        └──────────┘        └──────────┘     │
+│                         │                                                   │
+│                         ▼                                                   │
+│                  ┌──────────────┐                                           │
+│                  │support-      │  ← Throughout journey                     │
+│                  │operations    │                                           │
+│                  └──────────────┘                                           │
+│                                                                             │
+│   STRATEGIC OVERSIGHT: cs-strategist                                        │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Video Production (13 skills)
+
+**Parent Skill:** [`remotion-asset-coordinator`](skills/remotion-asset-coordinator) — Asset management for Remotion video projects
+
+Complete video creation pipeline from concept to render, built around [Remotion](https://remotion.dev).
+
+| Skill | Description | Use When |
+|-------|-------------|----------|
+| [`create-video-start`](skills/create-video-start) | Master orchestrator for video creation | Starting new video projects |
+| [`motion-designer`](skills/motion-designer) | Scene composition, timing, transitions | Designing motion graphics |
+| [`vsl-storyboard-writer`](skills/vsl-storyboard-writer) | Video sales letter storyboards | Creating VSL scripts |
+| [`remotion-best-practices`](skills/remotion-best-practices) | Core Remotion patterns | Any Remotion development |
+| [`remotion-scaffold`](skills/remotion-scaffold) | Project structure, file organization | Setting up Remotion projects |
+| [`remotion-spec-translator`](skills/remotion-spec-translator) | Convert motion specs to code | Implementing designs |
+| [`remotion-component-gen`](skills/remotion-component-gen) | Generate scene components | Building video scenes |
+| [`remotion-composition`](skills/remotion-composition) | Sequence ordering, transitions | Structuring videos |
+| [`remotion-animation`](skills/remotion-animation) | Spring configs, interpolations | Animation fine-tuning |
+| [`remotion-render-config`](skills/remotion-render-config) | Output settings, codec, format | Rendering videos |
+| [`remotion-performance-optimizer`](skills/remotion-performance-optimizer) | Performance analysis | Optimizing slow videos |
+| [`remotion-video-reviewer`](skills/remotion-video-reviewer) | Review for spec compliance | Quality assurance |
+
+### Video Production Pipeline
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      VIDEO PRODUCTION PIPELINE                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   CONCEPT           DESIGN            BUILD             RENDER              │
+│       │                │                 │                  │               │
+│       ▼                ▼                 ▼                  ▼               │
+│  ┌──────────┐    ┌──────────┐     ┌───────────┐     ┌───────────┐          │
+│  │vsl-      │    │motion-   │     │remotion-  │     │remotion-  │          │
+│  │storyboard│    │designer  │     │scaffold   │     │render-    │          │
+│  │-writer   │    │          │     │remotion-  │     │config     │          │
+│  │          │    │          │     │spec-      │     │remotion-  │          │
+│  │          │    │          │     │translator │     │performance│          │
+│  │          │    │          │     │remotion-  │     │-optimizer │          │
+│  │          │    │          │     │component- │     │remotion-  │          │
+│  │          │    │          │     │gen        │     │video-     │          │
+│  │          │    │          │     │remotion-  │     │reviewer   │          │
+│  │          │    │          │     │composition│     │           │          │
+│  │          │    │          │     │remotion-  │     │           │          │
+│  │          │    │          │     │animation  │     │           │          │
+│  └──────────┘    └──────────┘     └───────────┘     └───────────┘          │
+│                                                                             │
+│   ORCHESTRATION: create-video-start                                         │
+│   ASSETS: remotion-asset-coordinator                                        │
+│   PATTERNS: remotion-best-practices                                         │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -196,16 +328,30 @@ Complete video creation pipeline from concept to render, built around Remotion.
 
 ## Skill Structure
 
-Each skill follows a consistent structure:
+Each skill follows the [Agent Skills specification](https://agentskills.io/specification):
 
 ```
 skill-name/
-├── SKILL.md           # Required: overview, philosophy, how to use
-├── metadata.json      # Optional: version, references
-└── rules/             # Optional: individual guidelines
-    ├── _sections.md   # Rule organization and impact levels
-    ├── category-rule-name.md
-    └── ...
+├── SKILL.md           # Required: instructions for the agent
+├── rules/             # Optional: detailed guidelines
+│   ├── _sections.md   # Rule organization
+│   └── *.md           # Individual rule files
+└── references/        # Optional: supporting documentation
+```
+
+### SKILL.md Format
+
+```yaml
+---
+name: skill-name          # Lowercase, hyphens only, matches directory
+description: >
+  What this skill does and when to use it.
+  Include trigger phrases like "Use when..." and "Use for...".
+---
+
+# Skill Title
+
+Instructions and guidance for the agent...
 ```
 
 ### Impact Levels
@@ -222,16 +368,67 @@ Rules are tagged by impact:
 
 ---
 
+## Alternative Installation
+
+### Manual Installation
+
+Copy skills directly to your agent's skills folder:
+
+```bash
+# Clone the repo
+git clone https://github.com/ncklrs/startup-os-skills.git
+
+# Copy specific skills
+cp -r startup-os-skills/skills/discovery-caller ~/.claude/skills/
+
+# Or symlink for easy updates
+ln -s $(pwd)/startup-os-skills/skills/discovery-caller ~/.claude/skills/
+```
+
+### Agent-Specific Paths
+
+| Agent | Skills Path |
+|-------|-------------|
+| Claude Code | `~/.claude/skills/` |
+| Cursor | `.cursor/skills/` |
+| Windsurf | `.windsurf/skills/` |
+
+---
+
+## Roadmap
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           STARTUP OS SKILLS                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ✅ PHASE 1 - Core Revenue Engine (51 skills)                               │
+│     Sales (9) │ Marketing (14) │ Product (9) │ CS (6) │ Video (13)          │
+│                                                                             │
+│  ⏳ PHASE 2 - Operations & Finance                                          │
+│     Finance │ Legal │ People/HR │ Operations                                │
+│                                                                             │
+│  ⏳ PHASE 3 - Engineering & Technical                                       │
+│     Engineering │ Security │ Data │ Infrastructure                          │
+│                                                                             │
+│  ⏳ PHASE 4 - Strategy & Growth                                             │
+│     Strategy │ Fundraising │ M&A │ Board Management                         │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## Contributing
 
 ### Adding a New Skill
 
-1. Create a directory with your skill name (kebab-case)
-2. Add `SKILL.md` with frontmatter:
+1. Create a directory in `skills/` with your skill name (kebab-case)
+2. Add `SKILL.md` with required frontmatter:
    ```yaml
    ---
    name: your-skill-name
-   description: When and why to use this skill. Include trigger phrases.
+   description: What this skill does. Use when [triggers]. Use for [keywords].
    ---
    ```
 3. Add rules in `rules/` directory if needed
@@ -242,7 +439,7 @@ Rules are tagged by impact:
 - **Focused** — One skill, one domain
 - **Actionable** — Clear guidance, not just theory
 - **Examples** — Good/bad patterns for every guideline
-- **Trigger phrases** — Help Claude know when to use it
+- **Trigger phrases** — Help agents know when to activate
 
 ---
 
@@ -253,5 +450,5 @@ MIT
 ---
 
 <p align="center">
-  <sub>Built for <a href="https://claude.ai/code">Claude Code</a></sub>
+  <sub>Built for AI coding agents • Compatible with <a href="https://skills.sh">skills.sh</a></sub>
 </p>
