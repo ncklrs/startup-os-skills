@@ -1,0 +1,35 @@
+{
+  "name": "logging-best-practices",
+  "version": "1.0.0",
+  "author": "Based on Boris Tane's loggingsucks.com",
+  "references": [
+    {
+      "title": "Logging Sucks",
+      "url": "https://loggingsucks.com/",
+      "description": "Boris Tane's manifesto on production-grade logging"
+    }
+  ],
+  "tags": [
+    "logging",
+    "observability",
+    "wide-events",
+    "structured-logging",
+    "debugging",
+    "production"
+  ],
+  "keywords": [
+    "log",
+    "logging",
+    "observability",
+    "wide event",
+    "canonical log line",
+    "structured logging",
+    "cardinality",
+    "sampling",
+    "tail sampling",
+    "opentelemetry",
+    "otel",
+    "debug",
+    "production logging"
+  ]
+}
