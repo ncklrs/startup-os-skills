@@ -1,0 +1,57 @@
+{
+  "name": "adr",
+  "version": "1.0.0",
+  "author": "Based on Olaf Zimmermann's ADR methodology and MADR template",
+  "references": [
+    {
+      "title": "AD Definition of Ready",
+      "url": "https://ozimmer.ch/practices/2023/12/01/ADDefinitionOfReady.html",
+      "description": "START criteria for evaluating decision readiness"
+    },
+    {
+      "title": "ADR Creation Best Practices",
+      "url": "https://www.ozimmer.ch/practices/2023/04/03/ADRCreation.html",
+      "description": "Seven good practices and eleven anti-patterns for ADR writing"
+    },
+    {
+      "title": "MADR Template Primer",
+      "url": "https://www.ozimmer.ch/practices/2022/11/22/MADRTemplatePrimer.html",
+      "description": "Complete guide to the Markdown ADR template structure"
+    },
+    {
+      "title": "AD Definition of Done",
+      "url": "https://www.ozimmer.ch/practices/2020/05/22/ADDefinitionOfDone.html",
+      "description": "ECADR criteria for evaluating decision completeness"
+    },
+    {
+      "title": "ASR Test for Architectural Decisions",
+      "url": "https://www.ozimmer.ch/practices/2020/09/24/ASRTestECSADecisions.html",
+      "description": "Seven criteria for assessing architectural significance"
+    }
+  ],
+  "tags": [
+    "architecture",
+    "adr",
+    "decision-records",
+    "madr",
+    "software-architecture",
+    "documentation",
+    "design-decisions",
+    "technical-leadership"
+  ],
+  "keywords": [
+    "adr",
+    "architecture decision record",
+    "architectural decision",
+    "madr",
+    "decision log",
+    "design rationale",
+    "architecture documentation",
+    "technical decision",
+    "decision drivers",
+    "considered options",
+    "decision outcome",
+    "tradeoff analysis",
+    "architectural significance"
+  ]
+}
