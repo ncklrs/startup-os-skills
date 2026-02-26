@@ -9,9 +9,9 @@
 
 # Startup OS Skills
 
-A comprehensive collection of **52 AI agent skills** for building and scaling startups — reusable expertise modules covering sales, marketing, product, customer success, video production, and engineering.
+A comprehensive collection of **54 AI agent skills** for building and scaling startups — reusable expertise modules covering sales, marketing, product, customer success, video production, and engineering.
 
-[![Skills](https://img.shields.io/badge/skills-52-blue)](https://skills.sh)
+[![Skills](https://img.shields.io/badge/skills-54-blue)](https://skills.sh)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## Quick Start
@@ -71,8 +71,8 @@ Skills are markdown-based knowledge modules that AI agents load when invoked. Th
 | [Product](#product-9-skills) | 9 | `product-leader` |
 | [Customer Success](#customer-success-6-skills) | 6 | `cs-strategist` |
 | [Video Production](#video-production-13-skills) | 13 | `remotion-asset-coordinator` |
-| [Engineering](#engineering-1-skill) | 1 | — |
-| **Total** | **52** | |
+| [Engineering](#engineering-3-skills) | 3 | — |
+| **Total** | **54** | |
 
 ---
 
@@ -327,13 +327,42 @@ Complete video creation pipeline from concept to render, built around [Remotion]
 
 ---
 
-## Engineering (1 skill)
+## Engineering (3 skills)
 
 Technical skills for building production-grade systems.
 
 | Skill | Description | Use When |
 |-------|-------------|----------|
+| [`adr`](skills/adr) | Architecture Decision Record lifecycle management (MADR template, START/ECADR criteria) | Creating ADRs, reviewing architectural decisions, evaluating decision readiness or completeness |
 | [`logging-best-practices`](skills/logging-best-practices) | Wide events architecture, structured logging, smart sampling | Implementing logging, adding observability, reviewing log statements |
+| [`codex-review`](skills/codex-review) | Hand off code review to OpenAI Codex CLI for independent AI perspective | Getting a second opinion on code, reviewing PRs or uncommitted changes |
+
+### ADR Lifecycle
+
+Based on Olaf Zimmermann's [ADR methodology](https://ozimmer.ch/practices/2023/04/03/ADRCreation.html) and the [MADR template](https://adr.github.io/madr/):
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          ADR LIFECYCLE                                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   READY?              CREATE              DONE?              MAINTAIN       │
+│   (START)             (MADR)              (ECADR)            (Log)          │
+│       │                  │                   │                  │           │
+│       ▼                  ▼                   ▼                  ▼           │
+│  ┌──────────┐      ┌──────────┐       ┌──────────┐      ┌──────────┐      │
+│  │Stakeholders│    │Context &  │      │Evidence   │      │Status    │      │
+│  │Timing     │     │Problem    │      │Criteria   │      │tracking  │      │
+│  │Alternatives│    │Drivers    │      │Agreement  │      │Supersede │      │
+│  │Requirements│    │Options    │      │Documented │      │Review    │      │
+│  │Template   │     │Outcome    │      │Realization│      │triggers  │      │
+│  └──────────┘      │Consequences│     └──────────┘      └──────────┘      │
+│                     └──────────┘                                           │
+│                                                                             │
+│  GUARD RAILS: 11 anti-patterns │ 7 writing principles │ ASR test          │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ### Logging Philosophy
 
@@ -344,7 +373,7 @@ Based on Boris Tane's [loggingsucks.com](https://loggingsucks.com/) philosophy:
 │                         WIDE EVENTS ARCHITECTURE                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│   ❌ TRADITIONAL                    ✅ WIDE EVENTS                          │
+│   Traditional                       Wide Events                             │
 │                                                                             │
 │   logger.info("Request started")    const event = {                         │
 │   logger.info("User found")           request_id, timestamp, service,       │
@@ -445,8 +474,8 @@ ln -s $(pwd)/startup-os-skills/skills/discovery-caller ~/.claude/skills/
 │  ⏳ PHASE 2 - Operations & Finance                                          │
 │     Finance │ Legal │ People/HR │ Operations                                │
 │                                                                             │
-│  🚧 PHASE 3 - Engineering & Technical (1 skill)                             │
-│     ✅ Logging │ ⏳ Security │ ⏳ Data │ ⏳ Infrastructure                   │
+│  🚧 PHASE 3 - Engineering & Technical (3 skills)                            │
+│     ✅ ADR │ ✅ Logging │ ✅ Codex Review │ ⏳ Security │ ⏳ Data │ ⏳ Infra │
 │                                                                             │
 │  ⏳ PHASE 4 - Strategy & Growth                                             │
 │     Strategy │ Fundraising │ M&A │ Board Management                         │
