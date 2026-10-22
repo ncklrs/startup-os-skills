@@ -3,7 +3,7 @@ name: codex-review
 description: Hand off code review to OpenAI Codex CLI. Use when asked to "review code with codex",
              "codex review", "get a second opinion on code", "review my changes", "review this PR",
              or when you want AI-powered code review from a different model perspective.
-argument-hint: [uncommitted|PR #|branch|commit SHA]
+argument-hint: "[uncommitted|PR #|branch|commit SHA]"
 ---
 
 # Codex Code Review
